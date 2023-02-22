@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер цветовых моделей</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text-centered">Конвертер цветов</h1>
+
+    <div class="container">
+        <div>
+            <div class="swatchGrid" id="swatch-grid">
+                <div class="swatch" data-color="#ffffff" style="background: #ffffff"></div>
+                <div class="swatch" data-color="#5f2cdd" style="background: #5f2cdd"></div>
+                <div class="swatch" data-color="#752c53" style="background: #752c53"></div>
+                <div class="swatch" data-color="#3b8456" style="background: #3b8456"></div>
+                <div class="swatch" data-color="#a0563d" style="background: #a0563d"></div>
+                <div class="swatch" data-color="#5f5850" style="background: #5f5850"></div>
+                <div class="swatch" data-color="#c3c3c6" style="background: #c3c3c6"></div>
+                <div class="swatch" data-color="#edf1ff" style="background: #edf1ff"></div>
+
+                <div class="swatch" data-color="#da3855" style="background: #da3855"></div>
+                <div class="swatch" data-color="#eda541" style="background: #eda541"></div>
+                <div class="swatch" data-color="#f5ea5a" style="background: #f5ea5a"></div>
+                <div class="swatch" data-color="#75b85b" style="background: #75b85b"></div>
+                <div class="swatch" data-color="#66a5d7" style="background: #66a5d7"></div>
+                <div class="swatch" data-color="#817799" style="background: #817799"></div>
+                <div class="swatch" data-color="#e17ea5" style="background: #e17ea5"></div>
+                <div class="swatch" data-color="#f4cdaf" style="background: #f4cdaf"></div>
+            </div>
+
+            <div id="picker"></div>
+        </div>
+
+        <div class="right-area">
+            <div class="text-centered">
+                <label for="color-models-select" class="text-large">Цветовая модель:</label>
+                <select id="color-models-select" class="text-small" onchange="onSelectedColorModelChanged()">
+                    <option value="rgb">RGB</option>
+                    <option value="cmyk">CMYK</option>
+                    <option value="hls">HLS</option>
+                </select>
+            </div>
+
+
+            <div class="input-area">
+                <div class="color-input-block">
+                    <label id="label1" class="input-label" for="input1">R:</label>
+                    <input id="input1" type="number" class="color-input" min="0" max="255"
+                        oninput="onInputChanged(this)">
+                </div>
+                <div class="color-input-block">
+                    <label id="label2" class="input-label" for="input2">G:</label>
+                    <input id="input2" type="number" class="color-input" min="0" max="255"
+                        oninput="onInputChanged(this)">
+                </div>
+            </div>
+            <div class="input-area left-margin">
+                <div class="color-input-block">
+                    <label id="label3" class="input-label" for="input3">B:</label>
+                    <input id="input3" type="number" class="color-input" min="0" max="255"
+                        oninput="onInputChanged(this)">
+                </div>
+                <div class="color-input-block">
+                    <label id="label4" class="input-label" for="input4"></label>
+                    <input id="input4" type="number" class="color-input" lang="en" oninput="onInputChanged(this)"
+                        disabled="true">
+                </div>
+            </div>
+
+
+            <div id="color-rectangle"></div>
+
+            <div>
+                <b class="text-large model-name">RGB: </b>
+                <p id="rgbColor" class="text-large inline"></p>
+            </div>
+
+
+            <div>
+                <b class="text-large model-name">CMYK: </b>
+                <p id="cmykColor" class="text-large inline"></p>
+            </div>
+
+            <div>
+                <b class="text-large model-name">HLS: </b>
+                <p id="hlsColor" class="text-large inline"></p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

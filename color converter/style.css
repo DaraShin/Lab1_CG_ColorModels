@@ -1,0 +1,90 @@
+.text-centered {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.right-area {
+    padding: 32px;
+    background-color: #d1fae1;
+    box-shadow: 4px 4px 16px -2px grey;
+    border-radius: 10px;
+}
+
+.text-large {
+    font-size: 18px;
+}
+
+.text-small {
+    font-size: 16px;
+}
+
+.input-area {
+    display: inline-block;
+}
+
+.left-margin {
+    margin-left: 40px;
+}
+
+.color-input-block {
+    margin-top: 10px;
+}
+
+.input-label {
+    display: inline-block;
+    width: 24px;
+    font-size: 18px;
+}
+
+.color-input {
+    font-size: 16px;
+    width: 120px;
+}
+
+.model-name {
+    display: inline-block;
+    font-size: 18px;
+    width: 68px;
+}
+
+.inline {
+    display: inline;
+}
+
+.swatchGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 28px);
+    grid-template-rows: repeat(2, 28px);
+    grid-gap: 6px;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+
+.swatch {
+    border-radius: 4px;
+    border: solid 1px;
+    cursor: pointer;
+}
+
+#picker {
+    cursor: pointer;
+}
+
+#color-models-select {
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+#color-rectangle {
+    height: 24px;
+    background-color: white;
+    border: 2px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
