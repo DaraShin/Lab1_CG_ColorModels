@@ -17,28 +17,6 @@ var label2 = document.getElementById("label2");
 var label3 = document.getElementById("label3");
 var label4 = document.getElementById("label4");
 
-/*var onColorChanged = function (colorRgb) {
-  //console.log("in onColorChanged: " + colorRgb.r + ' ' + colorRgb.g + ' ' + colorRgb.b);
-  showRgbValue(colorRgb);
-  var cmyk = rgbToCmyk(colorRgb.r, colorRgb.g, colorRgb.b);
-  showCmykValue(cmyk);
-  var hls = rgbToHls(colorRgb.r, colorRgb.g, colorRgb.b);
-  showHlsValue(hls);
-
-  switch (selector.selectedIndex) {
-    case 0:
-      setRgbInput(colorRgb);
-      break;
-    case 1:
-      setCmykInput(cmyk);
-      break;
-    case 2:
-      setHlsInput(hls);
-      break;
-  }
-  colorRectangle.style.backgroundColor = "rgb(" + colorRgb.r + "," + colorRgb.g + "," + colorRgb.b + ")";
-};*/
-
 var updateColorLabels = (rgb, cmyk, hls) => {
   showRgbValue(rgb);
   showCmykValue(cmyk);
