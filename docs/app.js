@@ -62,6 +62,7 @@ function onSelectedColorModelChanged() {
       label4.innerHTML = "";
       setRgbRestrictions();
       setRgbInput(rgb);
+      showRgbValue(rgb);
       break;
     case 1:
       label1.innerHTML = "C:";
@@ -71,6 +72,7 @@ function onSelectedColorModelChanged() {
       setCmykRestrictions();
       let cmyk = rgbToCmyk(rgb.r, rgb.g, rgb.b);
       setCmykInput(cmyk);
+      showCmykValue(cmyk);
       break;
     case 2:
       label1.innerHTML = "H:";
@@ -80,6 +82,7 @@ function onSelectedColorModelChanged() {
       setHlsRestrictions();
       let hls = rgbToHls(rgb.r, rgb.g, rgb.b);
       setHlsInput(hls);
+      showHlsValue(hls);
       break;
   }
 }
